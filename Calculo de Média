@@ -1,0 +1,20 @@
+program media;
+
+uses
+    crt;
+var
+   n1, n2, t1, t2, md: real;
+
+begin
+     clrscr;
+     writeln('Digite a nota 1 e 2: ');
+     read(n1, n2);
+
+     writeln('Digite as notas do trabalho 1 e 2: ');
+     read(t1, t2);
+
+     md :=(n1 + n2 + t1 + t2)/4;
+     writeln('A sua media vale: ', md);
+
+     read;
+end.
