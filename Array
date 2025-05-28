@@ -1,0 +1,59 @@
+program dados_pessoais;
+
+uses
+    crt;
+
+type
+    pessoas = record
+        nome: packed array [1..50] of char;
+        apelido: packed array [1..50] of char;
+        idade: integer;
+        altura: real;
+    end;
+
+var
+  pessoa1, pessoa2: pessoas;
+    
+begin
+  clrscr;
+  writeln('Digite o seu nome');
+  readln(pessoa1.nome);
+  
+  writeln('Qual o seu apelido');
+  readln(pessoa1.apelido);
+    
+  writeln('Quantos anos tens?');
+  readln(pessoa1.idade);
+    
+  writeln('Quanto de altura tu medes?');
+  readln(pessoa1.altura);
+    
+  writeln('---------------------------------------------');
+    
+  writeln('Digite o seu nome');
+  readln(pessoa2.nome);
+    
+  writeln('Qual o seu apelido');
+  readln(pessoa2.apelido);
+    
+  writeln('Quantos anos tens?');
+  readln(pessoa2.idade);
+    
+  writeln('Quanto de altura tu medes?');
+  readln(pessoa2.altura);
+
+  writeln('---------------------------------------------');
+  writeln('Primeira Pessoa');   
+  write('Nome', pessoa1.nome);
+  writeln(pessoa1.apelido);
+  writeln('Tem ', pessoa1.idade, ' anos');
+  writeln('Mede ', pessoa1.altura:0:1, ' m de altura');
+   
+  writeln('---------------------------------------------');
+  writeln('Primeira Pessoa');   
+  write('Nome', pessoa2.nome);
+  writeln(pessoa2.apelido);
+  writeln('Tem ', pessoa2.idade, ' anos');
+  writeln('Mede ', pessoa2.altura:0:1, ' m de altura');
+    
+end.
